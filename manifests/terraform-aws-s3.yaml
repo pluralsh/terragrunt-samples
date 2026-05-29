@@ -12,3 +12,6 @@ spec:
   git:
     ref: main
     folder: terraform-aws-s3
+  jobSpec:
+    namespace: plrl-deploy-operator
+    serviceAccount: stacks
