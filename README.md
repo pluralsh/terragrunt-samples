@@ -34,4 +34,4 @@ terragrunt destroy
 
 ## Plural
 
-`manifests/service.yaml` syncs the stack manifests in `manifests/` to the management cluster (`cluster: mgmt`). Add it to your infra repo's `bootstrap/` folder, or apply it directly.
+Stack manifests live in `manifests/`. They use `cluster: mgmt` (your mgmt cluster handle from `plural up`). Change it if yours differs (`kubectl get clusters -A`).

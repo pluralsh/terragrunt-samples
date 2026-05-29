@@ -7,8 +7,8 @@ spec:
   type: TERRAGRUNT
   repositoryRef:
     name: terragrunt-samples
-  clusterRef:
-    name: target-cluster
+    namespace: default
+  cluster: mgmt
   git:
     ref: main
     folder: terraform-aws-s3

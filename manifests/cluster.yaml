@@ -1,7 +1,0 @@
-apiVersion: deployments.plural.sh/v1alpha1
-kind: Cluster
-metadata:
-  name: target-cluster
-  namespace: default
-spec:
-  handle: mgmt
