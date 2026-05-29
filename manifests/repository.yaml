@@ -1,0 +1,7 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: GitRepository
+metadata:
+  name: terragrunt-samples
+  namespace: default
+spec:
+  url: https://github.com/pluralsh/terragrunt-samples.git

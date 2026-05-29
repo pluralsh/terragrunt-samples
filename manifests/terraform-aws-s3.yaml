@@ -1,0 +1,14 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: InfrastructureStack
+metadata:
+  name: terragrunt-sample-terraform-aws-s3
+  namespace: default
+spec:
+  type: TERRAGRUNT
+  repositoryRef:
+    name: terragrunt-samples
+  clusterRef:
+    name: target-cluster
+  git:
+    ref: main
+    folder: terraform-aws-s3

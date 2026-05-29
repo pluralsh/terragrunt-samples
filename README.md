@@ -34,4 +34,4 @@ terragrunt destroy
 
 ## Plural
 
-`manifests/service.yaml` is a [ServiceDeployment](https://docs.plural.sh/plural-features/continuous-deployment/git-service) that syncs `manifests/stacks.yaml` to the management cluster (`cluster: mgmt`). Add it to your infra repo's `bootstrap/` folder, or apply it directly.
+`manifests/service.yaml` syncs the stack manifests in `manifests/` to the management cluster (`cluster: mgmt`). Add it to your infra repo's `bootstrap/` folder, or apply it directly.

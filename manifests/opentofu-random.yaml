@@ -1,0 +1,14 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: InfrastructureStack
+metadata:
+  name: terragrunt-sample-opentofu-random
+  namespace: default
+spec:
+  type: TERRAGRUNT
+  repositoryRef:
+    name: terragrunt-samples
+  clusterRef:
+    name: target-cluster
+  git:
+    ref: main
+    folder: opentofu-random
