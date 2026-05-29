@@ -1,0 +1,15 @@
+apiVersion: deployments.plural.sh/v1alpha1
+kind: ServiceDeployment
+metadata:
+  name: terragrunt-samples-stacks
+  namespace: default
+spec:
+  namespace: default
+  templated: false
+  git:
+    url: https://github.com/pluralsh/terragrunt-samples.git
+    ref: main
+    folder: manifests
+    files:
+      - stacks.yaml
+  cluster: mgmt
