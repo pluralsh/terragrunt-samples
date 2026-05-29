@@ -31,5 +31,3 @@ cd opentofu-random
 terragrunt apply
 terragrunt destroy
 ```
-
-For `terraform-aws-s3`, set a unique `remote_state.config.bucket` before the first run.

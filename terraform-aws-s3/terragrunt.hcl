@@ -21,24 +21,6 @@ provider "aws" {
 EOF
 }
 
-# Set a globally unique bucket name before first apply.
-remote_state {
-  backend = "s3"
-
-  generate = {
-    path      = "backend.tf"
-    if_exists = "overwrite_terragrunt"
-  }
-
-  config = {
-    bucket         = "terragrunt-samples-tfstate-change-me"
-    key            = "${path_relative_to_include()}/terraform.tfstate"
-    region         = local.aws_region
-    encrypt        = true
-    dynamodb_table = "terragrunt-samples-tf-locks"
-  }
-}
-
 locals {
   aws_region = "eu-central-1"
 }
